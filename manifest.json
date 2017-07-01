@@ -16,6 +16,12 @@
     "88": "icons/icon88.png"
   },
 
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ]
+  },
+
   "permissions": [
     "contextMenus"
   ]

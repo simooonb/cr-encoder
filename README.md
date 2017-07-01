@@ -4,6 +4,7 @@ This is a Google Chome extension which allows you to easily encode/decode to/fro
 
 ## Upcoming features
 
+* Context menu: copy encoded selected data as...
 * URL encoding
 * ASCII
 * Boolean
