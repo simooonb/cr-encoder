@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Easy conversion</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+
+      #convert {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="convert">
+      <input id="leftInput" type="text">
+      <select id="types">
+      </select>
+      <input id="rightInput" type="text">
+    </div>
+
+    <!--
+      - JavaScript and HTML must be in separate files according to the Chrome CSP doc
+      -->
+    <script src="popup.js"></script>
+  </body>
+</html>
