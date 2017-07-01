@@ -7,7 +7,7 @@
 
   "browser_action": {
     "default_icon": "icons/icon88.png",
-    "default_popup": "popup.html"
+    "default_popup": "src/popup.html"
   },
 
   "icons": {
