@@ -10,8 +10,10 @@ class ConversionUtility {
 
 // Conversions available.
 var conversionsAvailable = {
-    "base64": new ConversionUtility(strToBase64, base64ToStr),
-    "hex": new ConversionUtility(strToHex, hexToStr)
+    "Base64": new ConversionUtility(strToBase64, base64ToStr),
+    "Hexadecimal": new ConversionUtility(strToHex, hexToStr),
+    "URL encoding": new ConversionUtility(strToUrl, urlToStr),
+    "HTML encoding": new ConversionUtility(strToHtml, htmlToStr)
 }
 
 var conversionsKeys = Object.keys(conversionsAvailable);
@@ -114,6 +116,58 @@ function hexToStr(input) {
     }
 
     return result;
+}
+
+/**
+ * Encode a string into URL encoding.
+ * @param {string} input 
+ */
+function strToUrl(input) {
+    return encodeURIComponent(input);
+}
+
+/**
+ * Decode a URL encoded string.
+ * @param {string} input 
+ */
+function urlToStr(input) {
+    return decodeURIComponent(input);
+}
+
+/**
+ * Encode a string to HTML encoding.
+ * @param {string} input 
+ */
+function strToHtml(input) {
+    var entityMap = {
+        '"': "&quot;",
+        '\'': "&apos;",
+        '`': "&#x60;",
+        '&': "&amp;",
+        '<': "&lt;",
+        '>': "&gt;",
+        '/': "&#x2F;",
+        '=': "&#x3D;",
+        '©': "&copy;",
+        '§': "&sect;",
+        '£': "&pound;",
+        '€': "&euro;",
+        '°': "&deg;"
+    };
+
+    return String(input).replace(/["'`&<>\/=©§£€°]/g, function(s) {
+        return entityMap[s];
+    });
+}
+
+/**
+ * Decode a HTML encoded string.
+ * @param {string} input 
+ */
+function htmlToStr(input) {
+    var div = document.createElement('div');
+    div.innerHTML = input
+    return div.textContent;
 }
 
 /**

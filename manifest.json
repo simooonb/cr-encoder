@@ -3,7 +3,7 @@
 
   "name": "Cr Encoder",
   "description": "This extension encodes/decodes strings",
-  "version": "0.2",
+  "version": "0.3",
 
   "browser_action": {
     "default_icon": "icons/icon128.png",

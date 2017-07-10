@@ -6,10 +6,13 @@ This is a Google Chome extension which allows you to easily encode/decode to/fro
 
 * Base64
 * Hexadecimal
+* URL encoding
+* HTML encoding
 * Context menu option, for each available conversion, which copies your selection encoded
 
 ## Upcoming features
 
-* URL encoding
+* Unicode encoding
 * Boolean
+* Bigger/nicer popup
 * ?
